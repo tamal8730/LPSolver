@@ -28,7 +28,7 @@ Let us consider the following problem:
     2x + y <= 16
     x>=0, y>=0
 
-We first create an instance of `SimplexLPSolver`
+We first create an object of type [`LPSolver`](src/core/LPSolver.java)
 
     LPSolver solver = new SimplexLPSolver();
 
@@ -52,7 +52,34 @@ Now we add the constraints to the solver
 We finally maximize the objective function
 
     LPResult result = solver.maximize(objective);
-    System.out.println(result);
+
+**Complete example**
+```
+    import core.*;
+    import simplexlpsolver.SimplexLPSolver;
+    
+    public class Main{
+        public static void main(String[] args) {
+        
+            LPSolver solver = new SimplexLPSolver();
+            
+            LPObjective objective = new LPObjective(new LPTerm[] {
+                new LPTerm(40, "x"),
+                new LPTerm(30, "y"),
+            });
+    
+            LPConstraint c1 = new LPConstraint(new LPTerm[] { new LPTerm("x"), new LPTerm("y"), }, 12);
+            LPConstraint c2 = new LPConstraint(new LPTerm[] { new LPTerm(2, "x"), new LPTerm("y"), }, 16);
+    
+            solver.addConstraint(c1);
+            solver.addConstraint(c2);
+    
+            LPResult result = solver.maximize(objective);
+    
+            System.out.println(result);
+        }
+    }
+```
 
 **Output**
 
