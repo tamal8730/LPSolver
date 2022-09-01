@@ -21,15 +21,15 @@ import core.LPVariable;
  * Maximize z = 40x + 30y
  * 
  * Subject to,
- * x + y <= 12 
- * 2x + y <= 16
- * x>=0, y>=0
+ * x + y &lt;= 12
+ * 2x + y &lt;= 16
+ * x&gt;=0, y&gt;=0
  * 
  * The initial table for this problem would be:
  * 
  * coeff z          x   y   s0  s1   |   b
- * 0        s0      1   1   1   0    |   12      <- x + y + s0 = 12
- * 0        s1      2   1   0   1    |   16      <- 2x + y + s1 = 16
+ * 0        s0      1   1   1   0    |   12      &lt;- x + y + s0 = 12
+ * 0        s1      2   1   0   1    |   16      &lt;- 2x + y + s1 = 16
  * ------------------------------------------
  * cj-zj            40  30  0   0        0
  * 
@@ -134,7 +134,7 @@ public class SimplexTable {
      * @param objective             The objective function to be maximized
      * @param indexVariableMap      index to label map
      * @param constraints           List of constraints of the form
-     *                              (a1*x1)+(a2*x2)+...+(an*xn)<=b
+     *                              (a1*x1)+(a2*x2)+...+(an*xn)&lt=b
      */
     SimplexTable(int basicVariableCount, int nonBasicVariableCount,
             List<Integer> basicVariableIndices,

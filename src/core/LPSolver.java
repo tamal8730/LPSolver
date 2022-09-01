@@ -6,7 +6,7 @@ package core;
 public interface LPSolver {
 
     /**
-     * Adds a constraint of the form (c1*x1)+(c2*x2)+...+(cn*xn)<=b to the problem
+     * Adds a constraint of the form (c1*x1)+(c2*x2)+...+(cn*xn) &lt;=b to the problem
      */
     void addConstraint(LPConstraint constraint);
 

@@ -24,14 +24,14 @@ import java.util.Set;
  *
  * Subject to,
  *
- *      (c11*x1)+(c12*x2)+...+(c1n*xn)<=b1
- *      (c21*x1)+(c22*x2)+...+(c2n*xn)<=b2
+ *      (c11*x1)+(c12*x2)+...+(c1n*xn)&lt;=b1
+ *      (c21*x1)+(c22*x2)+...+(c2n*xn)&lt;=b2
  *                              .
  *                              .
  *                              .
- *      (cn1*x1)+(cn2*x2)+...+(cnn*xn)<=bn
+ *      (cm1*x1)+(cm2*x2)+...+(cmn*xn)&lt;=bm
  *
- *      a1,a2,..an,c11,c12,..c1n,c21,..cnn>=0
+ *      a1,a2,..an,c11,c12,..c1n,c21,..cnn&gt;=0
  * </pre>
  * </p>
  */
@@ -90,7 +90,7 @@ public class SimplexLPSolver implements LPSolver {
     private final List<Integer> slackVariableIndices = new ArrayList<>();
 
     /**
-     * Adds a constraint of the form (c1*x1)+(c2*x2)+...+(cn*xn)<=b to the problem
+     * Adds a constraint of the form (c1*x1)+(c2*x2)+...+(cn*xn)&lt;=b to the problem
      */
     @Override
     public void addConstraint(LPConstraint constraint) {

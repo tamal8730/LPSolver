@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * An object that represents inequations of the form
- * (c1*x1)+(c2*x2)+(c3*x3)+...+(cn*xn)<=b, used as constraints of a Linear
+ * (c1*x1)+(c2*x2)+(c3*x3)+...+(cn*xn) &lt;=b, used as constraints of a Linear
  * Programming Problem
  * 
  * @author Tamal Das

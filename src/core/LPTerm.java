@@ -2,7 +2,7 @@ package core;
 
 /**
  * A term is a pair of a variable and its coefficient in a linear expression.
- * For example, in the linear inequation 2x+3y-6z<=8, (2,x),(3,y) and (-6,z) are
+ * For example, in the linear inequation 2x+3y-6z &lt;=8, (2,x),(3,y) and (-6,z) are
  * the terms. The constant is ignored.
  */
 public class LPTerm {
